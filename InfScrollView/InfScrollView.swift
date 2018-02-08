@@ -24,10 +24,11 @@ class InfScrollView: UIScrollView {
   }
   
   private func setUp(){
-  self.contentSize = CGSize(width: self.frame.width*4, height: self.frame.height)
-  container = UIView(frame: CGRect(x: 0, y: 0, width: self.contentSize.width, height: self.contentSize.height))
-  self.addSubview(container)
+    self.contentSize = CGSize(width: self.frame.width*4, height: self.frame.height)
+    container = UIView(frame: CGRect(x: 0, y: 0, width: self.contentSize.width, height: self.contentSize.height))
+    self.addSubview(container)
   }
+  
   private func recenterIfNecessary(){
     let currentOffset = self.contentOffset
     let contentWidth = self.contentSize.width
