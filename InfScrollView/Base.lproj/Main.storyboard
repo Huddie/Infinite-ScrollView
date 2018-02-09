@@ -17,18 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xj6-2r-rqs" customClass="InfiniteScrollView" customModule="InfScrollView" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="xj6-2r-rqs" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="1EW-lk-kKc"/>
-                            <constraint firstItem="xj6-2r-rqs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2lj-er-PgX"/>
-                            <constraint firstItem="xj6-2r-rqs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HUv-QK-41r"/>
-                            <constraint firstAttribute="trailing" secondItem="xj6-2r-rqs" secondAttribute="trailing" id="o67-YZ-MXl"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
