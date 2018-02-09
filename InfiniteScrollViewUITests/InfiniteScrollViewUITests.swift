@@ -8,7 +8,7 @@
 
 import XCTest
 
-class InfScrollViewUITests: XCTestCase {
+class InfiniteScrollViewUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

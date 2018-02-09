@@ -12,8 +12,8 @@
 		C096ABEA202BAAA800E0D12C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C096ABE8202BAAA800E0D12C /* Main.storyboard */; };
 		C096ABEC202BAAA800E0D12C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C096ABEB202BAAA800E0D12C /* Assets.xcassets */; };
 		C096ABEF202BAAA800E0D12C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C096ABED202BAAA800E0D12C /* LaunchScreen.storyboard */; };
-		C096ABFA202BAAA800E0D12C /* InfScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C096ABF9202BAAA800E0D12C /* InfScrollViewTests.swift */; };
-		C096AC05202BAAA800E0D12C /* InfScrollViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C096AC04202BAAA800E0D12C /* InfScrollViewUITests.swift */; };
+		C096ABFA202BAAA800E0D12C /* InfiniteScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C096ABF9202BAAA800E0D12C /* InfiniteScrollViewTests.swift */; };
+		C096AC05202BAAA800E0D12C /* InfiniteScrollViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C096AC04202BAAA800E0D12C /* InfiniteScrollViewUITests.swift */; };
 		C0A8DB76202D3B2600D95D0A /* InfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A8DB75202D3B2600D95D0A /* InfiniteScrollView.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,10 +43,10 @@
 		C096ABEE202BAAA800E0D12C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C096ABF0202BAAA800E0D12C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C096ABF5202BAAA800E0D12C /* InfiniteScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfiniteScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C096ABF9202BAAA800E0D12C /* InfScrollViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfScrollViewTests.swift; sourceTree = "<group>"; };
+		C096ABF9202BAAA800E0D12C /* InfiniteScrollViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollViewTests.swift; sourceTree = "<group>"; };
 		C096ABFB202BAAA800E0D12C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C096AC00202BAAA800E0D12C /* InfiniteScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfiniteScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C096AC04202BAAA800E0D12C /* InfScrollViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfScrollViewUITests.swift; sourceTree = "<group>"; };
+		C096AC04202BAAA800E0D12C /* InfiniteScrollViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollViewUITests.swift; sourceTree = "<group>"; };
 		C096AC06202BAAA800E0D12C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0A8DB75202D3B2600D95D0A /* InfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,9 +79,9 @@
 		C096ABD8202BAAA800E0D12C = {
 			isa = PBXGroup;
 			children = (
-				C096ABE3202BAAA800E0D12C /* InfScrollView */,
-				C096ABF8202BAAA800E0D12C /* InfScrollViewTests */,
-				C096AC03202BAAA800E0D12C /* InfScrollViewUITests */,
+				C096ABE3202BAAA800E0D12C /* InfiniteScrollView */,
+				C096ABF8202BAAA800E0D12C /* InfiniteScrollViewTest */,
+				C096AC03202BAAA800E0D12C /* InfiniteScrollViewUITests */,
 				C096ABE2202BAAA800E0D12C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,7 +96,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C096ABE3202BAAA800E0D12C /* InfScrollView */ = {
+		C096ABE3202BAAA800E0D12C /* InfiniteScrollView */ = {
 			isa = PBXGroup;
 			children = (
 				C096ABE4202BAAA800E0D12C /* AppDelegate.swift */,
@@ -107,25 +107,25 @@
 				C096ABED202BAAA800E0D12C /* LaunchScreen.storyboard */,
 				C096ABF0202BAAA800E0D12C /* Info.plist */,
 			);
-			path = InfScrollView;
+			path = InfiniteScrollView;
 			sourceTree = "<group>";
 		};
-		C096ABF8202BAAA800E0D12C /* InfScrollViewTests */ = {
+		C096ABF8202BAAA800E0D12C /* InfiniteScrollViewTest */ = {
 			isa = PBXGroup;
 			children = (
-				C096ABF9202BAAA800E0D12C /* InfScrollViewTests.swift */,
+				C096ABF9202BAAA800E0D12C /* InfiniteScrollViewTests.swift */,
 				C096ABFB202BAAA800E0D12C /* Info.plist */,
 			);
-			path = InfScrollViewTests;
+			path = InfiniteScrollViewTest;
 			sourceTree = "<group>";
 		};
-		C096AC03202BAAA800E0D12C /* InfScrollViewUITests */ = {
+		C096AC03202BAAA800E0D12C /* InfiniteScrollViewUITests */ = {
 			isa = PBXGroup;
 			children = (
-				C096AC04202BAAA800E0D12C /* InfScrollViewUITests.swift */,
+				C096AC04202BAAA800E0D12C /* InfiniteScrollViewUITests.swift */,
 				C096AC06202BAAA800E0D12C /* Info.plist */,
 			);
-			path = InfScrollViewUITests;
+			path = InfiniteScrollViewUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C096ABFA202BAAA800E0D12C /* InfScrollViewTests.swift in Sources */,
+				C096ABFA202BAAA800E0D12C /* InfiniteScrollViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C096AC05202BAAA800E0D12C /* InfScrollViewUITests.swift in Sources */,
+				C096AC05202BAAA800E0D12C /* InfiniteScrollViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

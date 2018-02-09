@@ -23,10 +23,15 @@ protocol InfiniteScrollViewDataSource: class
 
 class InfiniteScrollView: UIScrollView
 {
+  
+  /*********** fileprivate **************************/
   fileprivate  var visibleView         = [UIView]()
   fileprivate  var container           = UIView()
+  
+  /*********** internal *****************************/
   internal     var InfiniteDelegate    : InfiniteScrollViewDataSource?
 
+  /*********** init *****************************/
   override init(frame: CGRect)
   {
     super .init(frame: frame)
@@ -39,21 +44,45 @@ class InfiniteScrollView: UIScrollView
     self.setUp()
   }
   
+  // recenter content periodically to achieve impression of infinite scrolling
+  override func layoutSubviews()
+  {
+    
+    super.layoutSubviews()
+    
+    recenterIfNecessary()
+    
+    let visBounds    = self.bounds
+    let minVisBounds = visBounds.minX - self.frame.width
+    let maxVisBounds = visBounds.maxX
+    
+    placeViews(min: minVisBounds, max: maxVisBounds)
+    
+  }
+}
+
+extension InfiniteScrollView {
+  
+  /*********** Public *****************************/
   public func reloadLayout()
   {
     setUp()
   }
-  private func setUp()
+}
+
+extension InfiniteScrollView {
+  
+  /*********** Private *****************************/
+  fileprivate func setUp()
   {
     self.contentSize = CGSize(width: self.frame.width*4, height: self.frame.height)
     self.container   = UIView(frame: CGRect(x: 0, y: 0,
-                                     width: self.contentSize.width, height: self.contentSize.height))
+                                            width: self.contentSize.width, height: self.contentSize.height))
     
-
     self.addSubview(container)
   }
   
-  private func recenterIfNecessary()
+  fileprivate func recenterIfNecessary()
   {
     let currentOffset      = self.contentOffset
     let contentWidth       = self.contentSize.width
@@ -74,25 +103,9 @@ class InfiniteScrollView: UIScrollView
       }
     }
   }
-  
-  // recenter content periodically to achieve impression of infinite scrolling
-  override func layoutSubviews()
-  {
-    
-    super.layoutSubviews()
-    
-    recenterIfNecessary()
-    
-    let visBounds    = self.bounds
-    let minVisBounds = visBounds.minX - self.frame.width
-    let maxVisBounds = visBounds.maxX
-  
-    placeViews(min: minVisBounds, max: maxVisBounds)
-    
-  }
-  
+
   // Correctly building, add to view and return for proper placement
-  private func createBuilding(direction: direction) -> UIView
+  fileprivate func createBuilding(direction: direction) -> UIView
   {
     let newView    = InfiniteDelegate?.infiniteItemForDirecection(direction)
     newView?.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
@@ -107,7 +120,7 @@ class InfiniteScrollView: UIScrollView
   }
   
   // Correctly place view on the right edge
-  private func placeNewOnRight(rightEdge: CGFloat) -> CGFloat
+  fileprivate func placeNewOnRight(rightEdge: CGFloat) -> CGFloat
   {
     
     let newView = createBuilding(direction: .right)
@@ -118,11 +131,11 @@ class InfiniteScrollView: UIScrollView
     newView.frame     = newframe
     
     return newframe.maxX
-  
+    
   }
   
   // Correctly place view on the left edge
-  private func placeNewOnLeft(leftEdge: CGFloat) -> CGFloat
+  fileprivate func placeNewOnLeft(leftEdge: CGFloat) -> CGFloat
   {
     
     let newView = createBuilding(direction: .left)
@@ -136,7 +149,7 @@ class InfiniteScrollView: UIScrollView
     
   }
   
-  private func placeViews(min: CGFloat, max: CGFloat)
+  fileprivate func placeViews(min: CGFloat, max: CGFloat)
   {
     
     // There must be atleast 1 view in the visible array for this function to run properly.
@@ -173,5 +186,4 @@ class InfiniteScrollView: UIScrollView
     }
   }
 }
-
 

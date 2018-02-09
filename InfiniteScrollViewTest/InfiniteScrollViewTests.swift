@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import InfScrollView
+@testable import InfiniteScrollView
 
-class InfScrollViewTests: XCTestCase {
+class InfiniteScrollViewTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
