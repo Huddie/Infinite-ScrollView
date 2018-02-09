@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-s.name             = 'InfiniteScrollView'
+s.name             = 'EAInfiniteScrollView'
 s.version          = '0.1.0'
 s.summary          = 'A simple scrollview that scrolls forever'
 
