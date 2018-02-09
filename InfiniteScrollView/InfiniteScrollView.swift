@@ -28,8 +28,8 @@ public class InfiniteScrollView: UIScrollView
   fileprivate  var visibleView         = [UIView]()
   fileprivate  var container           = UIView()
   
-  /*********** internal *****************************/
-  internal     var InfiniteDelegate    : InfiniteScrollViewDataSource?
+  /*********** public *****************************/
+  public var infiniteDelegate    : InfiniteScrollViewDataSource?
 
   /*********** init *****************************/
   override init(frame: CGRect)
@@ -99,7 +99,7 @@ extension InfiniteScrollView {
   // Correctly building, add to view and return for proper placement
   fileprivate func createBuilding(direction: direction) -> UIView
   {
-    let newView    = InfiniteDelegate?.infiniteItemForDirection(direction)
+    let newView    = infiniteDelegate?.infiniteItemForDirection(direction)
     if let newView = newView
     {
       newView.frame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)

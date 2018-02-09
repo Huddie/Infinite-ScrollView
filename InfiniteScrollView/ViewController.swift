@@ -29,7 +29,7 @@ class ViewController: UIViewController, InfiniteScrollViewDataSource
     infiniteSV.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive   = true
     infiniteSV.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive     = true
         
-    infiniteSV.InfiniteDelegate = self
+    infiniteSV.infiniteDelegate = self
 
   }
 
