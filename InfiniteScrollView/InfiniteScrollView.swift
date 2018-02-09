@@ -8,20 +8,20 @@
 
 import UIKit
 
-enum direction
+public enum direction
 {
   case left
   case right
 }
 
 
-protocol InfiniteScrollViewDataSource: class
+public protocol InfiniteScrollViewDataSource: class
 {
   func infiniteItemForDirection(_ direction: direction) -> UIView
 }
 
 
-class InfiniteScrollView: UIScrollView
+public class InfiniteScrollView: UIScrollView
 {
   
   /*********** fileprivate **************************/
@@ -38,14 +38,14 @@ class InfiniteScrollView: UIScrollView
     self.setUp()
   }
   
-  required init?(coder aDecoder: NSCoder)
+  required public init?(coder aDecoder: NSCoder)
   {
     super.init(coder: aDecoder)
     self.setUp()
   }
   
   // recenter content periodically to achieve impression of infinite scrolling
-  override func layoutSubviews()
+  override public func layoutSubviews()
   {
     
     super.layoutSubviews()
