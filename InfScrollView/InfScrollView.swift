@@ -1,6 +1,6 @@
 //
-//  InfScrollView.swift
-//  InfScrollView
+//  InfiniteScrollView.swift
+//  InfiniteScrollView
 //
 //  Created by Ehud Adler on 2/7/18.
 //  Copyright © 2018 Ehud Adler. All rights reserved.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class InfScrollView: UIScrollView {
+class InfiniteScrollView: UIScrollView {
 
-  var visbleArray = [UIView]()
+  var visibleView = [UIView]()
   var container   = UIView()
   
   override init(frame: CGRect) {
@@ -39,7 +39,7 @@ class InfScrollView: UIScrollView {
       self.contentOffset = CGPoint(x: centerOffsetX, y:  (currentOffset.y))
       
       // move content by the same amount so it appears to stay still
-      for view in visbleArray {
+      for view in visibleView {
         var theCenter = view.center
         theCenter.x += centerOffsetX - currentOffset.x
         view.center = theCenter
@@ -73,7 +73,7 @@ class InfScrollView: UIScrollView {
   // Correctly place view on the right edge
   private func placeNewOnRight(rightEdge: CGFloat) -> CGFloat {
     let newView = createBuilding()
-    visbleArray.append(newView)
+    visibleView.append(newView)
     var newframe = newView.frame
     newframe.origin.x = rightEdge
     newView.frame = newframe
@@ -85,7 +85,7 @@ class InfScrollView: UIScrollView {
   // Correctly place view on the left edge
   private func placeNewOnLeft(leftEdge: CGFloat) -> CGFloat {
     let newView = createBuilding()
-    visbleArray.insert(newView, at: 0)
+    visibleView.insert(newView, at: 0)
     var newframe = newView.frame
     newframe.origin.x = leftEdge - newframe.size.width
     newView.frame = newframe
@@ -99,38 +99,38 @@ class InfScrollView: UIScrollView {
     // There must be atleast 1 view in the visible array for this function to run properly.
     // Therefore, to start, we make sure that atleast one view exists
     
-    if visbleArray.count < 1 {
+    if visibleView.count < 1 {
      _ = self.placeNewOnRight(rightEdge: min)
     }
     
     // Add views that are missing on right side
-    var lastView = visbleArray.last
+    var lastView = visibleView.last
     var rightEdge: CGFloat = (lastView?.frame.maxX)!
     while rightEdge < max {
       rightEdge = self.placeNewOnRight(rightEdge: rightEdge)
     }
     
     // Add views that are missing on left side
-    var firstView = visbleArray.first
+    var firstView = visibleView.first
     var leftEdge: CGFloat = (firstView?.frame.minX)!
     while leftEdge > min {
        leftEdge = self.placeNewOnLeft(leftEdge: leftEdge)
     }
     
     // Remove views that have fallen off the right edge
-    lastView = visbleArray.last
+    lastView = visibleView.last
     while (lastView?.frame.origin.x)! > max {
       lastView?.removeFromSuperview()
-      visbleArray.removeLast()
-      lastView = visbleArray.last
+      visibleView.removeLast()
+      lastView = visibleView.last
     }
     
     // Remove views that have fallen off the left edge
-    firstView = visbleArray.first
+    firstView = visibleView.first
     while (firstView?.frame.origin.x)! < min {
       firstView?.removeFromSuperview()
-      visbleArray.removeFirst()
-      firstView = visbleArray.first
+      visibleView.removeFirst()
+      firstView = visibleView.first
     }
     
   }

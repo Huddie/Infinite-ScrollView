@@ -14,7 +14,6 @@
 		C096ABEF202BAAA800E0D12C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C096ABED202BAAA800E0D12C /* LaunchScreen.storyboard */; };
 		C096ABFA202BAAA800E0D12C /* InfScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C096ABF9202BAAA800E0D12C /* InfScrollViewTests.swift */; };
 		C096AC05202BAAA800E0D12C /* InfScrollViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C096AC04202BAAA800E0D12C /* InfScrollViewUITests.swift */; };
-		C096AC13202BAABE00E0D12C /* InfScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C096AC12202BAABE00E0D12C /* InfScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		C096AC00202BAAA800E0D12C /* InfScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C096AC04202BAAA800E0D12C /* InfScrollViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfScrollViewUITests.swift; sourceTree = "<group>"; };
 		C096AC06202BAAA800E0D12C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C096AC12202BAABE00E0D12C /* InfScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +99,6 @@
 			children = (
 				C096ABE4202BAAA800E0D12C /* AppDelegate.swift */,
 				C096ABE6202BAAA800E0D12C /* ViewController.swift */,
-				C096AC12202BAABE00E0D12C /* InfScrollView.swift */,
 				C096ABE8202BAAA800E0D12C /* Main.storyboard */,
 				C096ABEB202BAAA800E0D12C /* Assets.xcassets */,
 				C096ABED202BAAA800E0D12C /* LaunchScreen.storyboard */,
@@ -262,7 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C096AC13202BAABE00E0D12C /* InfScrollView.swift in Sources */,
 				C096ABE7202BAAA800E0D12C /* ViewController.swift in Sources */,
 				C096ABE5202BAAA800E0D12C /* AppDelegate.swift in Sources */,
 			);
