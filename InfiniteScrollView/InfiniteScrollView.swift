@@ -49,6 +49,11 @@ public class InfiniteScrollView: UIScrollView
   {
     
     super.layoutSubviews()
+
+    self.contentSize = CGSize(width: self.frame.width*4, height: self.frame.height)
+    self.container.frame =  CGRect(x: 0, y: 0,
+                                        width: self.contentSize.width, height: self.contentSize.height)
+    
     
     recenterIfNecessary()
     
@@ -63,22 +68,9 @@ public class InfiniteScrollView: UIScrollView
 
 extension InfiniteScrollView {
   
-  /*********** Public *****************************/
-  public func reloadLayout()
-  {
-    setUp()
-  }
-}
-
-extension InfiniteScrollView {
-  
   /*********** Private *****************************/
   fileprivate func setUp()
   {
-    self.contentSize = CGSize(width: self.frame.width*4, height: self.frame.height)
-    self.container   = UIView(frame: CGRect(x: 0, y: 0,
-                                            width: self.contentSize.width, height: self.contentSize.height))
-    
     self.addSubview(container)
   }
   
@@ -103,15 +95,14 @@ extension InfiniteScrollView {
       }
     }
   }
-
+  
   // Correctly building, add to view and return for proper placement
   fileprivate func createBuilding(direction: direction) -> UIView
   {
     let newView    = InfiniteDelegate?.infiniteItemForDirection(direction)
-    newView?.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
-    
     if let newView = newView
     {
+      newView.frame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
       container.addSubview(newView)
       return newView
     }

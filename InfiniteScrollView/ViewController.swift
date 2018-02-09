@@ -11,20 +11,26 @@ import UIKit
 class ViewController: UIViewController, InfiniteScrollViewDataSource
 {
   
-  
   let infiniteSV = InfiniteScrollView()
   
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    
-    infiniteSV.frame = self.view.bounds
-    infiniteSV.reloadLayout()
+    // Do any additional setup after loading the view, typically from a nib.
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
     
     self.view.addSubview(infiniteSV)
+    
+    infiniteSV.translatesAutoresizingMaskIntoConstraints = false
+    infiniteSV.topAnchor.constraint(equalTo: self.view.topAnchor).isActive       = true
+    infiniteSV.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+    infiniteSV.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive   = true
+    infiniteSV.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive     = true
+        
     infiniteSV.InfiniteDelegate = self
 
-    // Do any additional setup after loading the view, typically from a nib.
   }
 
   override func didReceiveMemoryWarning()
