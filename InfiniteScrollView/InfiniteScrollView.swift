@@ -17,7 +17,7 @@ enum direction
 
 protocol InfiniteScrollViewDataSource: class
 {
-  func infiniteItemForDirecection(_ direction: direction) -> UIView
+  func infiniteItemForDirection(_ direction: direction) -> UIView
 }
 
 
@@ -107,7 +107,7 @@ extension InfiniteScrollView {
   // Correctly building, add to view and return for proper placement
   fileprivate func createBuilding(direction: direction) -> UIView
   {
-    let newView    = InfiniteDelegate?.infiniteItemForDirecection(direction)
+    let newView    = InfiniteDelegate?.infiniteItemForDirection(direction)
     newView?.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
     
     if let newView = newView

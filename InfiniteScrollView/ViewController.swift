@@ -33,7 +33,7 @@ class ViewController: UIViewController, InfiniteScrollViewDataSource
     // Dispose of any resources that can be recreated.
   }
 
-  func infiniteItemForDirecection(_ direction: direction) -> UIView
+  func infiniteItemForDirection(_ direction: direction) -> UIView
   {
     let view = UIView()
     view.backgroundColor = generateRandomColor()
