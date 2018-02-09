@@ -35,17 +35,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C096ABE1202BAAA800E0D12C /* InfScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C096ABE1202BAAA800E0D12C /* InfiniteScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C096ABE4202BAAA800E0D12C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C096ABE6202BAAA800E0D12C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C096ABE9202BAAA800E0D12C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C096ABEB202BAAA800E0D12C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C096ABEE202BAAA800E0D12C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C096ABF0202BAAA800E0D12C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C096ABF5202BAAA800E0D12C /* InfScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C096ABF5202BAAA800E0D12C /* InfiniteScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfiniteScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C096ABF9202BAAA800E0D12C /* InfScrollViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfScrollViewTests.swift; sourceTree = "<group>"; };
 		C096ABFB202BAAA800E0D12C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C096AC00202BAAA800E0D12C /* InfScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C096AC00202BAAA800E0D12C /* InfiniteScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfiniteScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C096AC04202BAAA800E0D12C /* InfScrollViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfScrollViewUITests.swift; sourceTree = "<group>"; };
 		C096AC06202BAAA800E0D12C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0A8DB75202D3B2600D95D0A /* InfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
@@ -89,9 +89,9 @@
 		C096ABE2202BAAA800E0D12C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C096ABE1202BAAA800E0D12C /* InfScrollView.app */,
-				C096ABF5202BAAA800E0D12C /* InfScrollViewTests.xctest */,
-				C096AC00202BAAA800E0D12C /* InfScrollViewUITests.xctest */,
+				C096ABE1202BAAA800E0D12C /* InfiniteScrollView.app */,
+				C096ABF5202BAAA800E0D12C /* InfiniteScrollViewTests.xctest */,
+				C096AC00202BAAA800E0D12C /* InfiniteScrollViewUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,11 +101,11 @@
 			children = (
 				C096ABE4202BAAA800E0D12C /* AppDelegate.swift */,
 				C096ABE6202BAAA800E0D12C /* ViewController.swift */,
+				C0A8DB75202D3B2600D95D0A /* InfiniteScrollView.swift */,
 				C096ABE8202BAAA800E0D12C /* Main.storyboard */,
 				C096ABEB202BAAA800E0D12C /* Assets.xcassets */,
 				C096ABED202BAAA800E0D12C /* LaunchScreen.storyboard */,
 				C096ABF0202BAAA800E0D12C /* Info.plist */,
-				C0A8DB75202D3B2600D95D0A /* InfiniteScrollView.swift */,
 			);
 			path = InfScrollView;
 			sourceTree = "<group>";
@@ -131,9 +131,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C096ABE0202BAAA800E0D12C /* InfScrollView */ = {
+		C096ABE0202BAAA800E0D12C /* InfiniteScrollView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C096AC09202BAAA800E0D12C /* Build configuration list for PBXNativeTarget "InfScrollView" */;
+			buildConfigurationList = C096AC09202BAAA800E0D12C /* Build configuration list for PBXNativeTarget "InfiniteScrollView" */;
 			buildPhases = (
 				C096ABDD202BAAA800E0D12C /* Sources */,
 				C096ABDE202BAAA800E0D12C /* Frameworks */,
@@ -143,14 +143,14 @@
 			);
 			dependencies = (
 			);
-			name = InfScrollView;
+			name = InfiniteScrollView;
 			productName = InfScrollView;
-			productReference = C096ABE1202BAAA800E0D12C /* InfScrollView.app */;
+			productReference = C096ABE1202BAAA800E0D12C /* InfiniteScrollView.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C096ABF4202BAAA800E0D12C /* InfScrollViewTests */ = {
+		C096ABF4202BAAA800E0D12C /* InfiniteScrollViewTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C096AC0C202BAAA800E0D12C /* Build configuration list for PBXNativeTarget "InfScrollViewTests" */;
+			buildConfigurationList = C096AC0C202BAAA800E0D12C /* Build configuration list for PBXNativeTarget "InfiniteScrollViewTests" */;
 			buildPhases = (
 				C096ABF1202BAAA800E0D12C /* Sources */,
 				C096ABF2202BAAA800E0D12C /* Frameworks */,
@@ -161,14 +161,14 @@
 			dependencies = (
 				C096ABF7202BAAA800E0D12C /* PBXTargetDependency */,
 			);
-			name = InfScrollViewTests;
+			name = InfiniteScrollViewTests;
 			productName = InfScrollViewTests;
-			productReference = C096ABF5202BAAA800E0D12C /* InfScrollViewTests.xctest */;
+			productReference = C096ABF5202BAAA800E0D12C /* InfiniteScrollViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C096ABFF202BAAA800E0D12C /* InfScrollViewUITests */ = {
+		C096ABFF202BAAA800E0D12C /* InfiniteScrollViewUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C096AC0F202BAAA800E0D12C /* Build configuration list for PBXNativeTarget "InfScrollViewUITests" */;
+			buildConfigurationList = C096AC0F202BAAA800E0D12C /* Build configuration list for PBXNativeTarget "InfiniteScrollViewUITests" */;
 			buildPhases = (
 				C096ABFC202BAAA800E0D12C /* Sources */,
 				C096ABFD202BAAA800E0D12C /* Frameworks */,
@@ -179,9 +179,9 @@
 			dependencies = (
 				C096AC02202BAAA800E0D12C /* PBXTargetDependency */,
 			);
-			name = InfScrollViewUITests;
+			name = InfiniteScrollViewUITests;
 			productName = InfScrollViewUITests;
-			productReference = C096AC00202BAAA800E0D12C /* InfScrollViewUITests.xctest */;
+			productReference = C096AC00202BAAA800E0D12C /* InfiniteScrollViewUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -210,7 +210,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C096ABDC202BAAA800E0D12C /* Build configuration list for PBXProject "InfScrollView" */;
+			buildConfigurationList = C096ABDC202BAAA800E0D12C /* Build configuration list for PBXProject "InfiniteScrollView" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -223,9 +223,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C096ABE0202BAAA800E0D12C /* InfScrollView */,
-				C096ABF4202BAAA800E0D12C /* InfScrollViewTests */,
-				C096ABFF202BAAA800E0D12C /* InfScrollViewUITests */,
+				C096ABE0202BAAA800E0D12C /* InfiniteScrollView */,
+				C096ABF4202BAAA800E0D12C /* InfiniteScrollViewTests */,
+				C096ABFF202BAAA800E0D12C /* InfiniteScrollViewUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -289,12 +289,12 @@
 /* Begin PBXTargetDependency section */
 		C096ABF7202BAAA800E0D12C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C096ABE0202BAAA800E0D12C /* InfScrollView */;
+			target = C096ABE0202BAAA800E0D12C /* InfiniteScrollView */;
 			targetProxy = C096ABF6202BAAA800E0D12C /* PBXContainerItemProxy */;
 		};
 		C096AC02202BAAA800E0D12C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C096ABE0202BAAA800E0D12C /* InfScrollView */;
+			target = C096ABE0202BAAA800E0D12C /* InfiniteScrollView */;
 			targetProxy = C096AC01202BAAA800E0D12C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -469,7 +469,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfScrollView.app/InfScrollView";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfiniteScrollView.app/InfiniteScrollView";
 			};
 			name = Debug;
 		};
@@ -486,7 +486,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfScrollView.app/InfScrollView";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfiniteScrollView.app/InfiniteScrollView";
 			};
 			name = Release;
 		};
@@ -525,7 +525,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C096ABDC202BAAA800E0D12C /* Build configuration list for PBXProject "InfScrollView" */ = {
+		C096ABDC202BAAA800E0D12C /* Build configuration list for PBXProject "InfiniteScrollView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C096AC07202BAAA800E0D12C /* Debug */,
@@ -534,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C096AC09202BAAA800E0D12C /* Build configuration list for PBXNativeTarget "InfScrollView" */ = {
+		C096AC09202BAAA800E0D12C /* Build configuration list for PBXNativeTarget "InfiniteScrollView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C096AC0A202BAAA800E0D12C /* Debug */,
@@ -543,7 +543,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C096AC0C202BAAA800E0D12C /* Build configuration list for PBXNativeTarget "InfScrollViewTests" */ = {
+		C096AC0C202BAAA800E0D12C /* Build configuration list for PBXNativeTarget "InfiniteScrollViewTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C096AC0D202BAAA800E0D12C /* Debug */,
@@ -552,7 +552,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C096AC0F202BAAA800E0D12C /* Build configuration list for PBXNativeTarget "InfScrollViewUITests" */ = {
+		C096AC0F202BAAA800E0D12C /* Build configuration list for PBXNativeTarget "InfiniteScrollViewUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C096AC10202BAAA800E0D12C /* Debug */,
