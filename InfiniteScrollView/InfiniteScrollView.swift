@@ -20,7 +20,6 @@ public protocol InfiniteScrollViewDataSource: class
   func infiniteItemForDirection(_ direction: direction) -> UIView
 }
 
-
 public class InfiniteScrollView: UIScrollView
 {
   
@@ -54,13 +53,12 @@ public class InfiniteScrollView: UIScrollView
     self.container.frame =  CGRect(x: 0, y: 0,
                                         width: self.contentSize.width, height: self.contentSize.height)
     
-    
     recenterIfNecessary()
     
     let visBounds    = self.bounds
     let minVisBounds = visBounds.minX - self.frame.width
     let maxVisBounds = visBounds.maxX
-    
+
     placeViews(min: minVisBounds, max: maxVisBounds)
     
   }
@@ -78,6 +76,8 @@ extension InfiniteScrollView {
   {
     let currentOffset      = self.contentOffset
     let contentWidth       = self.contentSize.width
+    
+
     let centerOffsetX      = (contentWidth - (self.bounds.size.width)) / 2.0
     let distanceFromCenter = fabs((currentOffset.x) - centerOffsetX)
     
@@ -151,12 +151,16 @@ extension InfiniteScrollView {
     // Add views that are missing on right side
     var lastView           = visibleView.last
     var rightEdge: CGFloat = (lastView?.frame.maxX)!
-    while rightEdge < max { rightEdge = self.placeNewOnRight(rightEdge: rightEdge) }
+    while rightEdge < max {
+      print("RIGHT", rightEdge, max)
+      rightEdge = self.placeNewOnRight(rightEdge: rightEdge)
+      
+    }
     
     // Add views that are missing on left side
     var firstView         = visibleView.first
     var leftEdge: CGFloat = (firstView?.frame.minX)!
-    while leftEdge > min { leftEdge = self.placeNewOnLeft(leftEdge: leftEdge) }
+    while leftEdge > min + self.frame.width { leftEdge = self.placeNewOnLeft(leftEdge: leftEdge) }
     
     // Remove views that have fallen off the right edge
     lastView = visibleView.last
