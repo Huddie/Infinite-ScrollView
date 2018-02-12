@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, InfiniteScrollViewDataSource
 {
-  
+
+
   let infiniteSV = InfiniteScrollView()
   
   override func viewDidLoad()
@@ -40,8 +41,7 @@ class ViewController: UIViewController, InfiniteScrollViewDataSource
     // Dispose of any resources that can be recreated.
   }
 
-  func infiniteItemForDirection(_ direction: direction) -> UIView
-  {
+  func infiniteItem(_ lastView: UIView?, _ direction: direction) -> UIView {
     let view = UIView()
     view.backgroundColor = generateRandomColor()
     return view

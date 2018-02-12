@@ -17,7 +17,7 @@ public enum direction
 
 public protocol InfiniteScrollViewDataSource: class
 {
-  func infiniteItemForDirection(_ direction: direction) -> UIView
+  func infiniteItem(_ lastView: UIView?, _ direction: direction) -> UIView
 }
 
 public class InfiniteScrollView: UIScrollView
@@ -26,7 +26,7 @@ public class InfiniteScrollView: UIScrollView
   /*********** fileprivate **************************/
   fileprivate  var visibleView         = [UIView]()
   fileprivate  var container           = UIView()
-  
+  fileprivate  var _lastView           : UIView?
   /*********** public *****************************/
   public var infiniteDelegate    : InfiniteScrollViewDataSource?
 
@@ -99,7 +99,7 @@ extension InfiniteScrollView {
   // Correctly building, add to view and return for proper placement
   fileprivate func createBuilding(direction: direction) -> UIView
   {
-    let newView    = infiniteDelegate?.infiniteItemForDirection(direction)
+    let newView    = infiniteDelegate?.infiniteItem(_lastView, direction)
     if let newView = newView
     {
       newView.frame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
@@ -151,11 +151,7 @@ extension InfiniteScrollView {
     // Add views that are missing on right side
     var lastView           = visibleView.last
     var rightEdge: CGFloat = (lastView?.frame.maxX)!
-    while rightEdge < max {
-      print("RIGHT", rightEdge, max)
-      rightEdge = self.placeNewOnRight(rightEdge: rightEdge)
-      
-    }
+    while rightEdge < max { rightEdge = self.placeNewOnRight(rightEdge: rightEdge) }
     
     // Add views that are missing on left side
     var firstView         = visibleView.first
@@ -167,8 +163,8 @@ extension InfiniteScrollView {
     while (lastView?.frame.origin.x)! > max
     {
       lastView?.removeFromSuperview()
-      visibleView.removeLast()
-      lastView = visibleView.last
+      _lastView = visibleView.removeLast()
+      lastView  = visibleView.last
     }
     
     // Remove views that have fallen off the left edge
@@ -176,7 +172,7 @@ extension InfiniteScrollView {
     while (firstView?.frame.origin.x)! < min
     {
       firstView?.removeFromSuperview()
-      visibleView.removeFirst()
+      _lastView = visibleView.removeFirst()
       firstView = visibleView.first
     }
   }
